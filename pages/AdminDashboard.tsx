@@ -224,7 +224,7 @@ export const AdminDashboard: React.FC = () => {
 
        {/* 🗺 MAP VIEW */}
       {viewMode === "map" && (
-        <div className="bg-white rounded-3xl border h-[500px]">
+        <div className="bg-white rounded-3xl border h-125">
           <div ref={mapRef} className="w-full h-full rounded-3xl" />
         </div>
       )}
@@ -355,6 +355,67 @@ export const AdminDashboard: React.FC = () => {
           </div>
         </>
       )}
+      {/* CREATE CLEAN-UP DRIVE MODAL */}
+{showDriveModal && (
+  <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
+    <div className="bg-white p-6 rounded-xl w-full max-w-md space-y-3">
+      <h3 className="text-lg font-bold">Create Clean-up Drive</h3>
+
+      <input
+        placeholder="Title"
+        className="w-full p-3 border rounded"
+        value={drive.title}
+        onChange={(e) =>
+          setDrive({ ...drive, title: e.target.value })
+        }
+      />
+
+      <textarea
+        placeholder="Description"
+        className="w-full p-3 border rounded"
+        value={drive.description}
+        onChange={(e) =>
+          setDrive({ ...drive, description: e.target.value })
+        }
+      />
+
+      <input
+        type="date"
+        className="w-full p-3 border rounded"
+        value={drive.date}
+        onChange={(e) =>
+          setDrive({ ...drive, date: e.target.value })
+        }
+      />
+
+      <input
+        placeholder="Location (e.g. Near City Park)"
+        className="w-full p-3 border rounded"
+        value={drive.location}
+        onChange={(e) =>
+          setDrive({ ...drive, location: e.target.value })
+        }
+      />
+
+      <div className="flex justify-end gap-2 pt-2">
+        <button
+          onClick={() => setShowDriveModal(false)}
+          className="px-4 py-2 border rounded"
+        >
+          Cancel
+        </button>
+
+        <button
+          onClick={createCleanupDrive}
+          className="bg-blue-600 text-white px-4 py-2 rounded font-bold"
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
 
     </div>
   );
