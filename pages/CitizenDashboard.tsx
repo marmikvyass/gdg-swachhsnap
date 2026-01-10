@@ -144,7 +144,7 @@ export const CitizenDashboard: React.FC = () => {
 
       {/* HEADER */}
       <section className="bg-white rounded-2xl p-6 shadow border">
-        <div className="flex sm:flex-row flex-col items-center justify-between mb-6">
+        <div className="flex sm:flex-row gap-3 flex-col items-center justify-between mb-6">
           <h2 className="text-2xl font-bold">Report an Issue</h2>
 
           <div className="flex  gap-3">
