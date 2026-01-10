@@ -178,7 +178,7 @@ export const AdminDashboard: React.FC = () => {
     <div className="space-y-8 text-black">
 
       {/* HEADER */}
-      <div className="flex justify-between items-center">
+      <div className="flex sm:flex-row flex-col gap-3 sm:gap-0 justify-between items-center">
         <h2 className="text-2xl font-bold">Admin Console</h2>
 
         <div className="flex gap-3">
@@ -187,21 +187,21 @@ export const AdminDashboard: React.FC = () => {
             onClick={() =>
               setViewMode(viewMode === "list" ? "map" : "list")
             }
-            className="border px-5 py-3 rounded-xl font-bold"
+            className="border sm:px-5 sm:py-3 px-2 py-1 sm:h-auto h-15 w-30 sm:w-60 rounded-xl font-bold"
           >
             {viewMode === "list" ? "🗺 View Map" : "📋 View List"}
           </button>
 
           <button
             onClick={() => setShowDriveModal(true)}
-            className="bg-blue-600 text-white px-5 py-3 rounded-xl font-bold"
+            className="bg-blue-600 text-white sm:px-5 px-2 py-1 sm:py-3 rounded-xl font-bold"
           >
-            ➕ Create Clean-up Drive
+            Clean-up Drive
           </button>
 
           <button
             onClick={handleLogout}
-            className="bg-red-50 text-red-600 px-5 py-3 rounded-xl font-bold border"
+            className="bg-red-50 text-red-600 sm:px-5 sm:py-3 py-1 px-2 rounded-xl font-bold border"
           >
             Logout
           </button>
