@@ -144,22 +144,22 @@ export const CitizenDashboard: React.FC = () => {
 
       {/* HEADER */}
       <section className="bg-white rounded-2xl p-6 shadow border">
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex sm:flex-row flex-col items-center justify-between mb-6">
           <h2 className="text-2xl font-bold">Report an Issue</h2>
 
-          <div className="flex gap-3">
+          <div className="flex  gap-3">
             <button
               onClick={handleNewReport}
               disabled={loading}
-              className="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold"
+              className="m:px-5 sm:py-3 px-2 py-1 sm:h-auto h-15 w-30 bg-blue-600 text-white  rounded-xl font-bold"
             >
-              📸 New Report
+               New Report
             </button>
 
             {/* 🔴 SIGN OUT BUTTON */}
             <button
               onClick={handleSignOut}
-              className="bg-red-50 text-red-600 px-5 py-3 rounded-xl font-bold border border-red-200"
+              className="m:px-5 sm:py-3 px-2 py-1 sm:h-auto h-15 w-30 bg-red-50 text-red-600 rounded-xl font-bold border border-red-200"
             >
               Sign Out
             </button>
